@@ -1,0 +1,14 @@
+.help gripes Oct21 system
+.ih
+NAME
+gripes -- send gripes or suggestions to the system (obsolete)
+.ih
+USAGE
+gripes
+.ih
+DESCRIPTION
+The \fBgripes\fR task was used to post complaints, suggestions, or any
+other formal or informal comments regarding the IRAF system. Nowadays,
+the best way to do this is to create a new issue on
+https://github.com/iraf-community/iraf/issues.
+.endhelp

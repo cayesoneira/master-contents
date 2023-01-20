@@ -1,0 +1,9 @@
+  This product includes results achieved by the IRAF64 project in 2006-
+  2009 directed by Chisato Yamauchi (C-SODA/ISAS/JAXA).
+
+  Welcome to IRAF.  To list the available commands, type ? or ??.  To get
+  detailed information about a command, type `help <command>'.  To run  a
+  command  or  load  a  package,  type  its name.   Type  `bye' to exit a
+  package, or `logout' to get out  of the CL.
+
+  Visit http://github.com/iraf-community/iraf/issues to report problems.

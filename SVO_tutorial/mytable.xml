@@ -1,0 +1,2685 @@
+<?xml version='1.0'?>
+<VOTABLE version="1.2"
+ xmlns="http://www.ivoa.net/xml/VOTable/v1.2">
+<!--
+ !  VOTable written by STIL version 3.2 (uk.ac.starlink.votable.VOTableWriter)
+ !  at 2020-10-16T15:46:56
+ !-->
+<RESOURCE>
+<TABLE name="J/A+A/556/A144/stars" nrows="65">
+<DESCRIPTION>
+Kinematical candidate members  of ChaI and II: proper motions, photometry, and derived masses and ages
+</DESCRIPTION>
+<PARAM arraysize="19" datatype="char" name="votable-version" value="1.99+ (14-Oct-2013)"/>
+<PARAM arraysize="9" datatype="char" name="-ref" value="VOTx25608"/>
+<PARAM arraysize="5" datatype="char" name="-out.max" value="50000"/>
+<PARAM arraysize="1" datatype="char" name="queryParameters" value="4">
+<DESCRIPTION>-oc.form=dec
+-source=J/A+A/556/A144
+-out.all
+-out.max=50000</DESCRIPTION>
+</PARAM>
+<FIELD datatype="int" name="recno" ucd="meta.record" width="8">
+<DESCRIPTION>Record number assigned by the VizieR team. Should Not be used for identification.</DESCRIPTION>
+<VALUES null='-2147483648'/>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/VizieR-5?-info=XML&amp;-out.add=.&amp;-source=J/A+A/556/A144/stars&amp;recno=${recno}"/>
+</FIELD>
+<FIELD arraysize="11" datatype="char" name="Name" ucd="meta.id;meta.main">
+<DESCRIPTION>Object name (ChaI-PM-NN or ChaII-PM-NN)</DESCRIPTION>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/VizieR-4?-info=XML&amp;-out.add=.&amp;-source=J/A+A/556/A144&amp;-corr=FK=Name&amp;-out.max=9999&amp;Name===${Name}"/>
+</FIELD>
+<FIELD arraysize="3" datatype="char" name="SED" ucd="meta.ref.url">
+<DESCRIPTION>Spectral Energy Distribution (SED) for this star (from table4)</DESCRIPTION>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/vizExec/Vgraph?J/A+A/556/A144/${Name}&amp;-x0=0.4&amp;-x1=25&amp;-l&amp;x&amp;-l&amp;y"/>
+</FIELD>
+<FIELD arraysize="10" datatype="char" name="UCAC4" ucd="meta.id">
+<DESCRIPTION>UCAC4 identificator (FFF-NNNNNN)</DESCRIPTION>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/VizieR-4?-info=XML&amp;-out.add=.&amp;-source=I/322&amp;UCAC4=${UCAC4}"/>
+</FIELD>
+<FIELD arraysize="11" datatype="char" name="RAJ2000" ref="J2000" ucd="pos.eq.ra;meta.main" unit="&quot;h:m:s&quot;">
+<DESCRIPTION>Right Ascension J2000</DESCRIPTION>
+</FIELD>
+<FIELD arraysize="11" datatype="char" name="DEJ2000" ref="J2000" ucd="pos.eq.dec;meta.main" unit="&quot;d:m:s&quot;">
+<DESCRIPTION>Declination J2000</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="pmRA" precision="1" ref="J2000" ucd="pos.pm;pos.eq.ra" unit="mas/yr" width="5">
+<DESCRIPTION>UCAC4 proper motion in right ascension, (pmRA*cos(DE))</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="e_pmRA" precision="1" ucd="stat.error;pos.pm;pos.eq.ra" unit="mas/yr" width="4">
+<DESCRIPTION>Error on pmRAcosDE</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="pmDE" precision="1" ref="J2000" ucd="pos.pm;pos.eq.dec" unit="mas/yr" width="5">
+<DESCRIPTION>UCAC4 proper motion in Declination</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="e_pmDE" precision="1" ucd="stat.error;pos.pm;pos.eq.dec" unit="mas/yr" width="4">
+<DESCRIPTION>Error on pmDE</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Bmag" precision="2" ucd="phot.mag;em.opt.B" unit="mag" width="5">
+<DESCRIPTION>B magnitude from APASS (1)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Vmag" precision="2" ucd="phot.mag;em.opt.V" unit="mag" width="5">
+<DESCRIPTION>V magnitude from APASS (1)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="gmag" precision="2" ucd="phot.mag;em.opt.B" unit="mag" width="5">
+<DESCRIPTION>g magnitude from APASS (1)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="rmag" precision="2" ucd="phot.mag;em.opt.R" unit="mag" width="5">
+<DESCRIPTION>r magnitude from APASS (1)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="imag" precision="2" ucd="phot.mag;em.opt.I" unit="mag" width="5">
+<DESCRIPTION>i magnitude from APASS (1)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Jmag" precision="2" ucd="phot.mag;em.IR.J" unit="mag" width="5">
+<DESCRIPTION>2MASS J magnitude (1.2um)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="e_Jmag" precision="2" ucd="stat.error;phot.mag;em.IR.J" unit="mag" width="5">
+<DESCRIPTION>Error in J magnitude (rounded to 0.01mag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Hmag" precision="2" ucd="phot.mag;em.IR.H" unit="mag" width="5">
+<DESCRIPTION>2MASS H magnitude (1.6um)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="e_Hmag" precision="2" ucd="stat.error;phot.mag;em.IR.H" unit="mag" width="5">
+<DESCRIPTION>Error in H magnitude (rounded to 0.01mag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Kmag" precision="2" ucd="phot.mag;em.IR.K" unit="mag" width="5">
+<DESCRIPTION>2MASS Ks magnitude (2.2um)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="e_Kmag" precision="2" ucd="stat.error;phot.mag;em.IR.K" unit="mag" width="5">
+<DESCRIPTION>Error in Ks magnitude (rounded to 0.01mag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Avg" precision="2" ucd="phys.absorption" unit="mag" width="5">
+<DESCRIPTION>Visual extinction from adaptive grid</DESCRIPTION>
+</FIELD>
+<FIELD arraysize="2" datatype="char" name="2M" ucd="meta.ref.url">
+<DESCRIPTION>Display the 2MASS data (Cat. II/246) within 1"</DESCRIPTION>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/VizieR-4?-info=XML&amp;-out.add=.&amp;-source=2246&amp;-c=${+RAJ2000}${+DEJ2000}&amp;-c.eq=J2000.000,rs=1"/>
+</FIELD>
+<FIELD arraysize="8" datatype="char" name="Model" ucd="stat.param;meta.modelled">
+<DESCRIPTION>Model grid of the best fit</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="chi2" precision="2" ucd="stat.fit.chi2;meta.modelled" width="6">
+<DESCRIPTION>Reduced {chi}^2^ of best fit</DESCRIPTION>
+</FIELD>
+<FIELD datatype="short" name="Teff" ucd="phys.temperature.effective" unit="K" width="4">
+<DESCRIPTION>Best-fitting effective temperature</DESCRIPTION>
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="float" name="PTeff" precision="2" ucd="stat.fit.goodness" width="5">
+<DESCRIPTION>[0/1] Bayesian probability of Teff</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="logg" precision="1" ucd="phys.gravity" unit="[cm/s2]" width="4">
+<DESCRIPTION>Best-fitting surface gravity</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Plogg" precision="2" ucd="stat.fit.goodness" width="5">
+<DESCRIPTION>[0/1] Bayesian probability of logg</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Av" precision="2" ucd="phys.absorption;em.opt" unit="mag" width="5">
+<DESCRIPTION>Best-fitting optical extinction</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="PAv" precision="2" ucd="stat.fit.goodness" width="5">
+<DESCRIPTION>[0/1] Bayesian probability of Av</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="logL" precision="2" ucd="phys.luminosity" unit="[Lsun]" width="5">
+<DESCRIPTION>Bolometric luminosity (log)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="e_logL" precision="2" ucd="stat.error" unit="[Lsun]" width="5">
+<DESCRIPTION>Error in logL</DESCRIPTION>
+</FIELD>
+<FIELD datatype="short" name="Age" ucd="time.age" unit="Myr" width="2">
+<DESCRIPTION>[1/20]? Age [NULL integer written as an empty string]</DESCRIPTION>
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="float" name="Mass" precision="2" ucd="phys.mass" unit="Msun" width="5">
+<DESCRIPTION>[0.3/1.3]? Mass</DESCRIPTION>
+</FIELD>
+<FIELD arraysize="2" datatype="char" name="Mm" ucd="meta.code.member">
+<DESCRIPTION>[nmc? ] Membership status, m=member (1)</DESCRIPTION>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/VizieR?-6N&amp;-info=XML&amp;-out.add=.&amp;&amp;lt;&amp;quot;Note&amp;quot;&amp;catid=35560144&amp;notid=4&amp;-out.emph=${Mm}"/>
+</FIELD>
+<FIELD datatype="unsignedByte" name="Com" ucd="meta.note" width="1">
+<DESCRIPTION>[1/2]? Possible mid-IR excess (2) [NULL integer written as an empty string]</DESCRIPTION>
+<VALUES null='255'/>
+<LINK title="LINK" href="http://vizier.u-strasbg.fr/viz-bin/VizieR?-6N&amp;-info=XML&amp;-out.add=.&amp;&amp;lt;&amp;quot;Note&amp;quot;&amp;catid=35560144&amp;notid=5&amp;-out.emph=${Com}"/>
+</FIELD>
+<DATA>
+<TABLEDATA>
+  <TR>
+    <TD>1</TD>
+    <TD>ChaI-PM-1</TD>
+    <TD>SED</TD>
+    <TD>051-009778</TD>
+    <TD>11 24 19.03</TD>
+    <TD>-79 51 48.7</TD>
+    <TD>-23.9</TD>
+    <TD>1.2</TD>
+    <TD>1.4</TD>
+    <TD>1.1</TD>
+    <TD>13.09</TD>
+    <TD>11.67</TD>
+    <TD>12.37</TD>
+    <TD>11.15</TD>
+    <TD>10.56</TD>
+    <TD>8.97</TD>
+    <TD>0.02</TD>
+    <TD>8.22</TD>
+    <TD>0.05</TD>
+    <TD>8.05</TD>
+    <TD>0.03</TD>
+    <TD>0.24</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>8.85</TD>
+    <TD>4000</TD>
+    <TD>0.59</TD>
+    <TD>4.0</TD>
+    <TD>0.51</TD>
+    <TD>0.05</TD>
+    <TD>0.06</TD>
+    <TD>0.09</TD>
+    <TD>0.1</TD>
+    <TD>2</TD>
+    <TD>1.15</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>2</TD>
+    <TD>ChaI-PM-2</TD>
+    <TD>SED</TD>
+    <TD>052-010029</TD>
+    <TD>11 38 34.93</TD>
+    <TD>-79 47 33.1</TD>
+    <TD>-23.3</TD>
+    <TD>2.9</TD>
+    <TD>4.4</TD>
+    <TD>2.5</TD>
+    <TD>14.21</TD>
+    <TD>12.69</TD>
+    <TD>13.44</TD>
+    <TD>12.13</TD>
+    <TD>11.53</TD>
+    <TD>9.89</TD>
+    <TD>0.02</TD>
+    <TD>9.14</TD>
+    <TD>0.03</TD>
+    <TD>8.95</TD>
+    <TD>0.02</TD>
+    <TD>0.41</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>12.91</TD>
+    <TD>4100</TD>
+    <TD>0.62</TD>
+    <TD>3.5</TD>
+    <TD>0.7</TD>
+    <TD>0.35</TD>
+    <TD>0.15</TD>
+    <TD>-0.27</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>3</TD>
+    <TD>ChaI-PM-3</TD>
+    <TD>SED</TD>
+    <TD>054-010728</TD>
+    <TD>11 36 28.16</TD>
+    <TD>-79 22 20.2</TD>
+    <TD>-16.0</TD>
+    <TD>2.9</TD>
+    <TD>0.7</TD>
+    <TD>1.4</TD>
+    <TD>13.21</TD>
+    <TD>11.88</TD>
+    <TD>12.51</TD>
+    <TD>11.41</TD>
+    <TD>10.95</TD>
+    <TD>9.49</TD>
+    <TD>0.02</TD>
+    <TD>8.82</TD>
+    <TD>0.05</TD>
+    <TD>8.65</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>4.85</TD>
+    <TD>4200</TD>
+    <TD>0.67</TD>
+    <TD>4.0</TD>
+    <TD>0.47</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.12</TD>
+    <TD>0.11</TD>
+    <TD>7</TD>
+    <TD>1.2</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>4</TD>
+    <TD>ChaI-PM-4</TD>
+    <TD>SED</TD>
+    <TD>054-010966</TD>
+    <TD>11 47 39.05</TD>
+    <TD>-79 13 57.6</TD>
+    <TD>-15.2</TD>
+    <TD>1.3</TD>
+    <TD>1.6</TD>
+    <TD>1.6</TD>
+    <TD>12.69</TD>
+    <TD>11.17</TD>
+    <TD>11.91</TD>
+    <TD>10.62</TD>
+    <TD>10.04</TD>
+    <TD>8.29</TD>
+    <TD>0.02</TD>
+    <TD>7.57</TD>
+    <TD>0.03</TD>
+    <TD>7.33</TD>
+    <TD>0.02</TD>
+    <TD>0.17</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>7.01</TD>
+    <TD>3900</TD>
+    <TD>0.76</TD>
+    <TD>4.0</TD>
+    <TD>0.5</TD>
+    <TD>0.12</TD>
+    <TD>0.06</TD>
+    <TD>0.34</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>m?</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>5</TD>
+    <TD>ChaI-PM-5</TD>
+    <TD>SED</TD>
+    <TD>055-010397</TD>
+    <TD>11 19 35.35</TD>
+    <TD>-79 11 25.4</TD>
+    <TD>-17.0</TD>
+    <TD>0.8</TD>
+    <TD>0.7</TD>
+    <TD>1.0</TD>
+    <TD>12.23</TD>
+    <TD>10.59</TD>
+    <TD>11.38</TD>
+    <TD>10.11</TD>
+    <TD>9.2</TD>
+    <TD>7.43</TD>
+    <TD>0.03</TD>
+    <TD>6.59</TD>
+    <TD>0.03</TD>
+    <TD>6.35</TD>
+    <TD>0.02</TD>
+    <TD>0.71</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>19.39</TD>
+    <TD>4000</TD>
+    <TD>0.67</TD>
+    <TD>4.0</TD>
+    <TD>0.73</TD>
+    <TD>0.68</TD>
+    <TD>0.19</TD>
+    <TD>0.72</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>6</TD>
+    <TD>ChaI-PM-6</TD>
+    <TD>SED</TD>
+    <TD>055-010573</TD>
+    <TD>11 26 35.10</TD>
+    <TD>-79 03 26.7</TD>
+    <TD>-19.6</TD>
+    <TD>1.6</TD>
+    <TD>4.9</TD>
+    <TD>1.0</TD>
+    <TD>13.03</TD>
+    <TD>11.59</TD>
+    <TD>12.3</TD>
+    <TD>11.07</TD>
+    <TD>10.52</TD>
+    <TD>8.93</TD>
+    <TD>0.02</TD>
+    <TD>8.25</TD>
+    <TD>0.04</TD>
+    <TD>8.05</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>4.62</TD>
+    <TD>4000</TD>
+    <TD>0.97</TD>
+    <TD>4.0</TD>
+    <TD>0.7</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.08</TD>
+    <TD>0.1</TD>
+    <TD>2</TD>
+    <TD>1.15</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>7</TD>
+    <TD>ChaI-PM-7</TD>
+    <TD>SED</TD>
+    <TD>055-010743</TD>
+    <TD>11 33 56.53</TD>
+    <TD>-79 10 08.1</TD>
+    <TD>-15.2</TD>
+    <TD>1.4</TD>
+    <TD>-0.5</TD>
+    <TD>1.4</TD>
+    <TD>14.15</TD>
+    <TD>12.76</TD>
+    <TD>13.43</TD>
+    <TD>12.3</TD>
+    <TD>11.76</TD>
+    <TD>10.15</TD>
+    <TD>0.02</TD>
+    <TD>9.52</TD>
+    <TD>0.02</TD>
+    <TD>9.33</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>8.61</TD>
+    <TD>4100</TD>
+    <TD>0.96</TD>
+    <TD>3.5</TD>
+    <TD>0.54</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.42</TD>
+    <TD>0.1</TD>
+    <TD>14</TD>
+    <TD>1.0</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>8</TD>
+    <TD>ChaI-PM-8</TD>
+    <TD>SED</TD>
+    <TD>056-010912</TD>
+    <TD>11 23 11.10</TD>
+    <TD>-78 56 14.4</TD>
+    <TD>-16.0</TD>
+    <TD>3.3</TD>
+    <TD>3.9</TD>
+    <TD>4.1</TD>
+    <TD>13.56</TD>
+    <TD>12.12</TD>
+    <TD>12.84</TD>
+    <TD>11.63</TD>
+    <TD>11.11</TD>
+    <TD>9.61</TD>
+    <TD>0.03</TD>
+    <TD>8.93</TD>
+    <TD>0.02</TD>
+    <TD>8.77</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>8.17</TD>
+    <TD>4100</TD>
+    <TD>0.93</TD>
+    <TD>3.5</TD>
+    <TD>0.47</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.19</TD>
+    <TD>0.1</TD>
+    <TD>7</TD>
+    <TD>1.1</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>9</TD>
+    <TD>ChaI-PM-9</TD>
+    <TD>SED</TD>
+    <TD>056-011976</TD>
+    <TD>11 55 08.09</TD>
+    <TD>-78 50 28.1</TD>
+    <TD>-18.1</TD>
+    <TD>3.6</TD>
+    <TD>2.4</TD>
+    <TD>1.7</TD>
+    <TD>13.72</TD>
+    <TD>12.2</TD>
+    <TD>12.95</TD>
+    <TD>11.68</TD>
+    <TD>11.27</TD>
+    <TD>9.7</TD>
+    <TD>0.02</TD>
+    <TD>9.07</TD>
+    <TD>0.02</TD>
+    <TD>8.86</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>14.13</TD>
+    <TD>4100</TD>
+    <TD>0.94</TD>
+    <TD>3.5</TD>
+    <TD>0.36</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.23</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>10</TD>
+    <TD>ChaI-PM-11</TD>
+    <TD>SED</TD>
+    <TD>058-009871</TD>
+    <TD>10 31 21.57</TD>
+    <TD>-78 27 48.1</TD>
+    <TD>-21.3</TD>
+    <TD>1.6</TD>
+    <TD>0.0</TD>
+    <TD>1.4</TD>
+    <TD>13.17</TD>
+    <TD>11.9</TD>
+    <TD>12.52</TD>
+    <TD>11.44</TD>
+    <TD>10.91</TD>
+    <TD>9.39</TD>
+    <TD>0.02</TD>
+    <TD>8.78</TD>
+    <TD>0.07</TD>
+    <TD>8.55</TD>
+    <TD>0.02</TD>
+    <TD>0.35</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>6.13</TD>
+    <TD>4200</TD>
+    <TD>0.47</TD>
+    <TD>4.0</TD>
+    <TD>0.48</TD>
+    <TD>0.09</TD>
+    <TD>0.06</TD>
+    <TD>-0.05</TD>
+    <TD>0.1</TD>
+    <TD>5</TD>
+    <TD>1.3</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>11</TD>
+    <TD>ChaI-PM-12</TD>
+    <TD>SED</TD>
+    <TD>059-010277</TD>
+    <TD>10 57 49.82</TD>
+    <TD>-78 20 39.3</TD>
+    <TD>-17.6</TD>
+    <TD>1.7</TD>
+    <TD>4.0</TD>
+    <TD>1.6</TD>
+    <TD>15.33</TD>
+    <TD>13.8</TD>
+    <TD>14.54</TD>
+    <TD>13.22</TD>
+    <TD>12.63</TD>
+    <TD>10.81</TD>
+    <TD>0.02</TD>
+    <TD>10.15</TD>
+    <TD>0.02</TD>
+    <TD>9.92</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>13.23</TD>
+    <TD>3800</TD>
+    <TD>0.99</TD>
+    <TD>4.0</TD>
+    <TD>0.92</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.71</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>12</TD>
+    <TD>ChaI-PM-13</TD>
+    <TD>SED</TD>
+    <TD>059-010308</TD>
+    <TD>10 59 38.22</TD>
+    <TD>-78 22 42.1</TD>
+    <TD>-21.6</TD>
+    <TD>1.1</TD>
+    <TD>5.6</TD>
+    <TD>1.4</TD>
+    <TD>12.78</TD>
+    <TD>11.07</TD>
+    <TD>11.92</TD>
+    <TD>10.4</TD>
+    <TD>9.67</TD>
+    <TD>7.75</TD>
+    <TD>0.02</TD>
+    <TD>6.95</TD>
+    <TD>0.05</TD>
+    <TD>6.69</TD>
+    <TD>0.02</TD>
+    <TD>1.08</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>13.48</TD>
+    <TD>4000</TD>
+    <TD>0.62</TD>
+    <TD>4.0</TD>
+    <TD>0.7</TD>
+    <TD>0.86</TD>
+    <TD>0.28</TD>
+    <TD>0.67</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>13</TD>
+    <TD>ChaI-PM-14</TD>
+    <TD>SED</TD>
+    <TD>059-010316</TD>
+    <TD>11 00 15.59</TD>
+    <TD>-78 14 10.2</TD>
+    <TD>-15.2</TD>
+    <TD>1.5</TD>
+    <TD>-2.2</TD>
+    <TD>1.5</TD>
+    <TD>15.46</TD>
+    <TD>13.71</TD>
+    <TD>14.59</TD>
+    <TD>12.97</TD>
+    <TD>12.13</TD>
+    <TD>9.96</TD>
+    <TD>0.03</TD>
+    <TD>9.1</TD>
+    <TD>0.02</TD>
+    <TD>8.83</TD>
+    <TD>0.02</TD>
+    <TD>1.73</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>44.62</TD>
+    <TD>4100</TD>
+    <TD>0.67</TD>
+    <TD>4.0</TD>
+    <TD>0.5</TD>
+    <TD>1.56</TD>
+    <TD>0.15</TD>
+    <TD>-0.13</TD>
+    <TD>0.09</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>14</TD>
+    <TD>ChaI-PM-16</TD>
+    <TD>SED</TD>
+    <TD>062-010209</TD>
+    <TD>10 48 26.64</TD>
+    <TD>-77 39 19.2</TD>
+    <TD>-19.5</TD>
+    <TD>1.0</TD>
+    <TD>4.7</TD>
+    <TD>1.2</TD>
+    <TD>13.04</TD>
+    <TD>11.45</TD>
+    <TD>12.25</TD>
+    <TD>10.84</TD>
+    <TD>10.14</TD>
+    <TD>8.26</TD>
+    <TD>0.03</TD>
+    <TD>7.54</TD>
+    <TD>0.05</TD>
+    <TD>7.3</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>19.0</TD>
+    <TD>3700</TD>
+    <TD>0.9</TD>
+    <TD>4.0</TD>
+    <TD>0.54</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.3</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>15</TD>
+    <TD>ChaI-PM-17</TD>
+    <TD>SED</TD>
+    <TD>062-010325</TD>
+    <TD>10 56 18.54</TD>
+    <TD>-77 44 53.0</TD>
+    <TD>-18.0</TD>
+    <TD>1.5</TD>
+    <TD>-1.1</TD>
+    <TD>1.2</TD>
+    <TD>14.56</TD>
+    <TD>12.41</TD>
+    <TD>13.43</TD>
+    <TD>11.5</TD>
+    <TD>9.76</TD>
+    <TD>6.92</TD>
+    <TD>0.03</TD>
+    <TD>5.84</TD>
+    <TD>0.04</TD>
+    <TD>5.45</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>86.03</TD>
+    <TD>2800</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.84</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>16</TD>
+    <TD>ChaI-PM-18</TD>
+    <TD>SED</TD>
+    <TD>063-011258</TD>
+    <TD>11 17 57.98</TD>
+    <TD>-77 28 39.2</TD>
+    <TD>-17.3</TD>
+    <TD>5.3</TD>
+    <TD>2.7</TD>
+    <TD>4.2</TD>
+    <TD>17.82</TD>
+    <TD>16.42</TD>
+    <TD>16.99</TD>
+    <TD>15.6</TD>
+    <TD>13.87</TD>
+    <TD>11.53</TD>
+    <TD>0.03</TD>
+    <TD>10.88</TD>
+    <TD>0.02</TD>
+    <TD>10.64</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>104.39</TD>
+    <TD>3000</TD>
+    <TD>1.0</TD>
+    <TD>5.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-1.06</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>17</TD>
+    <TD>ChaI-PM-19</TD>
+    <TD>SED</TD>
+    <TD>063-012349</TD>
+    <TD>11 46 09.78</TD>
+    <TD>-77 27 54.3</TD>
+    <TD>-16.9</TD>
+    <TD>3.8</TD>
+    <TD>3.7</TD>
+    <TD>1.2</TD>
+    <TD>13.58</TD>
+    <TD>12.04</TD>
+    <TD>12.8</TD>
+    <TD>11.51</TD>
+    <TD>11.03</TD>
+    <TD>9.55</TD>
+    <TD>0.02</TD>
+    <TD>8.91</TD>
+    <TD>0.03</TD>
+    <TD>8.71</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>18.85</TD>
+    <TD>4100</TD>
+    <TD>0.98</TD>
+    <TD>4.5</TD>
+    <TD>0.52</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.16</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>18</TD>
+    <TD>ChaI-PM-20</TD>
+    <TD>SED</TD>
+    <TD>064-010772</TD>
+    <TD>11 12 05.15</TD>
+    <TD>-77 12 40.7</TD>
+    <TD>-15.1</TD>
+    <TD>1.5</TD>
+    <TD>-2.2</TD>
+    <TD>1.7</TD>
+    <TD>16.51</TD>
+    <TD>14.27</TD>
+    <TD>15.42</TD>
+    <TD>13.21</TD>
+    <TD>12.13</TD>
+    <TD>9.36</TD>
+    <TD>0.02</TD>
+    <TD>8.21</TD>
+    <TD>0.04</TD>
+    <TD>7.85</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>111.33</TD>
+    <TD>2800</TD>
+    <TD>0.99</TD>
+    <TD>3.5</TD>
+    <TD>0.95</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.15</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>19</TD>
+    <TD>ChaI-PM-21</TD>
+    <TD>SED</TD>
+    <TD>064-011840</TD>
+    <TD>11 43 48.52</TD>
+    <TD>-77 16 39.8</TD>
+    <TD>-20.9</TD>
+    <TD>1.2</TD>
+    <TD>5.6</TD>
+    <TD>1.2</TD>
+    <TD>14.01</TD>
+    <TD>12.65</TD>
+    <TD>13.31</TD>
+    <TD>12.17</TD>
+    <TD>11.67</TD>
+    <TD>10.19</TD>
+    <TD>0.02</TD>
+    <TD>9.58</TD>
+    <TD>0.02</TD>
+    <TD>9.41</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>9.06</TD>
+    <TD>4200</TD>
+    <TD>0.98</TD>
+    <TD>5.0</TD>
+    <TD>0.34</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.42</TD>
+    <TD>0.1</TD>
+    <TD>19</TD>
+    <TD>1.0</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>20</TD>
+    <TD>ChaI-PM-22</TD>
+    <TD>SED</TD>
+    <TD>065-010266</TD>
+    <TD>10 18 44.30</TD>
+    <TD>-77 01 05.3</TD>
+    <TD>-16.0</TD>
+    <TD>1.2</TD>
+    <TD>2.0</TD>
+    <TD>2.1</TD>
+    <TD>13.42</TD>
+    <TD>12.06</TD>
+    <TD>12.71</TD>
+    <TD>11.58</TD>
+    <TD>11.0</TD>
+    <TD>9.38</TD>
+    <TD>0.03</TD>
+    <TD>8.78</TD>
+    <TD>0.07</TD>
+    <TD>8.6</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>8.77</TD>
+    <TD>4000</TD>
+    <TD>0.94</TD>
+    <TD>4.0</TD>
+    <TD>0.44</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.11</TD>
+    <TD>0.1</TD>
+    <TD>4</TD>
+    <TD>1.1</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>21</TD>
+    <TD>ChaI-PM-23</TD>
+    <TD>SED</TD>
+    <TD>067-010946</TD>
+    <TD>10 31 57.71</TD>
+    <TD>-76 44 25.5</TD>
+    <TD>-19.4</TD>
+    <TD>1.3</TD>
+    <TD>4.6</TD>
+    <TD>1.2</TD>
+    <TD>13.73</TD>
+    <TD>12.15</TD>
+    <TD>12.92</TD>
+    <TD>11.58</TD>
+    <TD>11.01</TD>
+    <TD>9.35</TD>
+    <TD>0.02</TD>
+    <TD>8.68</TD>
+    <TD>0.05</TD>
+    <TD>8.46</TD>
+    <TD>0.02</TD>
+    <TD>0.16</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>9.26</TD>
+    <TD>4000</TD>
+    <TD>0.93</TD>
+    <TD>4.0</TD>
+    <TD>0.71</TD>
+    <TD>0.16</TD>
+    <TD>0.18</TD>
+    <TD>-0.1</TD>
+    <TD>0.1</TD>
+    <TD>4</TD>
+    <TD>1.1</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>22</TD>
+    <TD>ChaI-PM-24</TD>
+    <TD>SED</TD>
+    <TD>067-011535</TD>
+    <TD>10 50 50.59</TD>
+    <TD>-76 44 48.9</TD>
+    <TD>-14.9</TD>
+    <TD>1.2</TD>
+    <TD>1.8</TD>
+    <TD>1.5</TD>
+    <TD>13.28</TD>
+    <TD>11.97</TD>
+    <TD>12.58</TD>
+    <TD>11.48</TD>
+    <TD>11.01</TD>
+    <TD>9.43</TD>
+    <TD>0.02</TD>
+    <TD>8.85</TD>
+    <TD>0.02</TD>
+    <TD>8.62</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>5.83</TD>
+    <TD>4200</TD>
+    <TD>0.67</TD>
+    <TD>4.5</TD>
+    <TD>0.32</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.13</TD>
+    <TD>0.14</TD>
+    <TD>7</TD>
+    <TD>1.2</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>23</TD>
+    <TD>ChaI-PM-25</TD>
+    <TD>SED</TD>
+    <TD>067-012242</TD>
+    <TD>11 22 26.40</TD>
+    <TD>-76 46 08.7</TD>
+    <TD>-19.1</TD>
+    <TD>1.3</TD>
+    <TD>3.6</TD>
+    <TD>1.4</TD>
+    <TD>13.92</TD>
+    <TD>12.39</TD>
+    <TD>13.15</TD>
+    <TD>11.81</TD>
+    <TD>11.28</TD>
+    <TD>9.64</TD>
+    <TD>0.02</TD>
+    <TD>8.93</TD>
+    <TD>0.04</TD>
+    <TD>8.73</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>16.68</TD>
+    <TD>3900</TD>
+    <TD>0.98</TD>
+    <TD>4.5</TD>
+    <TD>0.44</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.21</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>24</TD>
+    <TD>ChaI-PM-26</TD>
+    <TD>SED</TD>
+    <TD>067-013090</TD>
+    <TD>11 46 11.39</TD>
+    <TD>-76 37 26.0</TD>
+    <TD>-19.1</TD>
+    <TD>3.0</TD>
+    <TD>3.3</TD>
+    <TD>1.1</TD>
+    <TD>13.09</TD>
+    <TD>11.64</TD>
+    <TD>12.36</TD>
+    <TD>11.14</TD>
+    <TD>10.69</TD>
+    <TD>9.2</TD>
+    <TD>0.03</TD>
+    <TD>8.59</TD>
+    <TD>0.05</TD>
+    <TD>8.39</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>11.51</TD>
+    <TD>4200</TD>
+    <TD>0.78</TD>
+    <TD>4.5</TD>
+    <TD>0.31</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.01</TD>
+    <TD>0.11</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>25</TD>
+    <TD>ChaI-PM-27</TD>
+    <TD>SED</TD>
+    <TD>068-011668</TD>
+    <TD>10 39 31.02</TD>
+    <TD>-76 33 41.0</TD>
+    <TD>-21.0</TD>
+    <TD>1.5</TD>
+    <TD>4.3</TD>
+    <TD>1.8</TD>
+    <TD>12.94</TD>
+    <TD>11.51</TD>
+    <TD>12.22</TD>
+    <TD>10.99</TD>
+    <TD>10.47</TD>
+    <TD>8.9</TD>
+    <TD>0.03</TD>
+    <TD>8.2</TD>
+    <TD>0.04</TD>
+    <TD>7.99</TD>
+    <TD>0.04</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>4.84</TD>
+    <TD>4000</TD>
+    <TD>0.94</TD>
+    <TD>4.0</TD>
+    <TD>0.73</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.09</TD>
+    <TD>0.1</TD>
+    <TD>2</TD>
+    <TD>1.15</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>26</TD>
+    <TD>ChaI-PM-28</TD>
+    <TD>SED</TD>
+    <TD>068-012962</TD>
+    <TD>11 21 30.81</TD>
+    <TD>-76 33 35.2</TD>
+    <TD>-15.4</TD>
+    <TD>2.1</TD>
+    <TD>-1.0</TD>
+    <TD>2.2</TD>
+    <TD>16.8</TD>
+    <TD>15.07</TD>
+    <TD>15.92</TD>
+    <TD>14.32</TD>
+    <TD>13.12</TD>
+    <TD>10.9</TD>
+    <TD>0.02</TD>
+    <TD>10.15</TD>
+    <TD>0.02</TD>
+    <TD>9.88</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>15.0</TD>
+    <TD>3200</TD>
+    <TD>0.68</TD>
+    <TD>5.0</TD>
+    <TD>0.29</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.79</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>27</TD>
+    <TD>ChaI-PM-29</TD>
+    <TD>SED</TD>
+    <TD>069-012749</TD>
+    <TD>11 12 00.38</TD>
+    <TD>-76 14 10.5</TD>
+    <TD>-15.0</TD>
+    <TD>1.6</TD>
+    <TD>2.0</TD>
+    <TD>1.7</TD>
+    <TD>14.78</TD>
+    <TD>13.1</TD>
+    <TD>13.94</TD>
+    <TD>12.43</TD>
+    <TD>11.7</TD>
+    <TD>9.52</TD>
+    <TD>0.03</TD>
+    <TD>8.65</TD>
+    <TD>0.04</TD>
+    <TD>8.36</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>54.19</TD>
+    <TD>3400</TD>
+    <TD>0.96</TD>
+    <TD>3.5</TD>
+    <TD>0.95</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.2</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>28</TD>
+    <TD>ChaI-PM-30</TD>
+    <TD>SED</TD>
+    <TD>069-013658</TD>
+    <TD>11 35 52.56</TD>
+    <TD>-76 19 01.0</TD>
+    <TD>-20.0</TD>
+    <TD>1.6</TD>
+    <TD>1.2</TD>
+    <TD>1.6</TD>
+    <TD>14.5</TD>
+    <TD>13.12</TD>
+    <TD>13.79</TD>
+    <TD>12.62</TD>
+    <TD>12.1</TD>
+    <TD>10.5</TD>
+    <TD>0.03</TD>
+    <TD>9.84</TD>
+    <TD>0.02</TD>
+    <TD>9.67</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>6.29</TD>
+    <TD>4100</TD>
+    <TD>0.97</TD>
+    <TD>4.5</TD>
+    <TD>0.49</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.55</TD>
+    <TD>0.1</TD>
+    <TD>20</TD>
+    <TD>0.9</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>29</TD>
+    <TD>ChaI-PM-31</TD>
+    <TD>SED</TD>
+    <TD>071-013120</TD>
+    <TD>10 52 51.59</TD>
+    <TD>-75 54 37.3</TD>
+    <TD>-15.5</TD>
+    <TD>1.4</TD>
+    <TD>4.2</TD>
+    <TD>1.4</TD>
+    <TD>13.59</TD>
+    <TD>11.88</TD>
+    <TD>12.71</TD>
+    <TD>11.22</TD>
+    <TD>10.51</TD>
+    <TD>8.65</TD>
+    <TD>0.02</TD>
+    <TD>7.84</TD>
+    <TD>0.05</TD>
+    <TD>7.61</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>24.35</TD>
+    <TD>3600</TD>
+    <TD>0.98</TD>
+    <TD>4.0</TD>
+    <TD>0.91</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.14</TD>
+    <TD>0.14</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>30</TD>
+    <TD>ChaI-PM-32</TD>
+    <TD>SED</TD>
+    <TD>071-015025</TD>
+    <TD>11 37 25.57</TD>
+    <TD>-75 52 05.1</TD>
+    <TD>-21.2</TD>
+    <TD>2.1</TD>
+    <TD>5.6</TD>
+    <TD>2.1</TD>
+    <TD>15.61</TD>
+    <TD>14.13</TD>
+    <TD>14.83</TD>
+    <TD>13.52</TD>
+    <TD>12.79</TD>
+    <TD>10.87</TD>
+    <TD>0.02</TD>
+    <TD>10.32</TD>
+    <TD>0.02</TD>
+    <TD>10.06</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>17.44</TD>
+    <TD>3800</TD>
+    <TD>0.54</TD>
+    <TD>4.0</TD>
+    <TD>0.55</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.77</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>31</TD>
+    <TD>ChaI-PM-33</TD>
+    <TD>SED</TD>
+    <TD>071-015061</TD>
+    <TD>11 39 12.53</TD>
+    <TD>-75 50 46.7</TD>
+    <TD>-15.3</TD>
+    <TD>2.2</TD>
+    <TD>-1.1</TD>
+    <TD>2.1</TD>
+    <TD>15.76</TD>
+    <TD>14.07</TD>
+    <TD>14.88</TD>
+    <TD>13.46</TD>
+    <TD>12.78</TD>
+    <TD>10.88</TD>
+    <TD>0.02</TD>
+    <TD>10.13</TD>
+    <TD>0.02</TD>
+    <TD>9.91</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>14.79</TD>
+    <TD>3600</TD>
+    <TD>0.56</TD>
+    <TD>4.0</TD>
+    <TD>0.96</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.75</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>32</TD>
+    <TD>ChaI-PM-34</TD>
+    <TD>SED</TD>
+    <TD>071-015244</TD>
+    <TD>11 45 05.21</TD>
+    <TD>-75 48 48.9</TD>
+    <TD>-20.8</TD>
+    <TD>1.1</TD>
+    <TD>5.4</TD>
+    <TD>1.1</TD>
+    <TD>12.94</TD>
+    <TD>11.39</TD>
+    <TD>12.12</TD>
+    <TD>10.83</TD>
+    <TD>10.31</TD>
+    <TD>8.63</TD>
+    <TD>0.03</TD>
+    <TD>7.96</TD>
+    <TD>0.02</TD>
+    <TD>7.78</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>19.06</TD>
+    <TD>4000</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>0.65</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.17</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>33</TD>
+    <TD>ChaI-PM-35</TD>
+    <TD>SED</TD>
+    <TD>071-015400</TD>
+    <TD>11 48 49.56</TD>
+    <TD>-75 57 55.0</TD>
+    <TD>-16.5</TD>
+    <TD>1.0</TD>
+    <TD>3.5</TD>
+    <TD>1.1</TD>
+    <TD>12.15</TD>
+    <TD>10.53</TD>
+    <TD>11.41</TD>
+    <TD>9.98</TD>
+    <TD>9.31</TD>
+    <TD>7.54</TD>
+    <TD>0.03</TD>
+    <TD>6.77</TD>
+    <TD>0.04</TD>
+    <TD>6.58</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>13.11</TD>
+    <TD>3800</TD>
+    <TD>0.92</TD>
+    <TD>4.0</TD>
+    <TD>0.5</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.61</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>34</TD>
+    <TD>ChaI-PM-37</TD>
+    <TD>SED</TD>
+    <TD>072-015250</TD>
+    <TD>11 36 33.52</TD>
+    <TD>-75 47 14.3</TD>
+    <TD>-15.7</TD>
+    <TD>2.3</TD>
+    <TD>0.0</TD>
+    <TD>2.1</TD>
+    <TD>16.75</TD>
+    <TD>14.86</TD>
+    <TD>15.81</TD>
+    <TD>14.02</TD>
+    <TD>13.04</TD>
+    <TD>10.65</TD>
+    <TD>0.02</TD>
+    <TD>9.73</TD>
+    <TD>0.02</TD>
+    <TD>9.45</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>43.45</TD>
+    <TD>3000</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.67</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>35</TD>
+    <TD>ChaI-PM-38</TD>
+    <TD>SED</TD>
+    <TD>072-015687</TD>
+    <TD>11 47 56.70</TD>
+    <TD>-75 36 31.7</TD>
+    <TD>-17.5</TD>
+    <TD>1.1</TD>
+    <TD>1.2</TD>
+    <TD>1.1</TD>
+    <TD>12.55</TD>
+    <TD>10.63</TD>
+    <TD>11.56</TD>
+    <TD>9.97</TD>
+    <TD>9.02</TD>
+    <TD>6.97</TD>
+    <TD>0.02</TD>
+    <TD>6.08</TD>
+    <TD>0.03</TD>
+    <TD>5.8</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>49.7</TD>
+    <TD>3000</TD>
+    <TD>0.86</TD>
+    <TD>4.0</TD>
+    <TD>0.88</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.83</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>36</TD>
+    <TD>ChaI-PM-39</TD>
+    <TD>SED</TD>
+    <TD>073-015115</TD>
+    <TD>11 14 26.21</TD>
+    <TD>-75 25 10.3</TD>
+    <TD>-23.0</TD>
+    <TD>1.1</TD>
+    <TD>5.6</TD>
+    <TD>1.3</TD>
+    <TD>12.22</TD>
+    <TD>10.84</TD>
+    <TD>11.53</TD>
+    <TD>10.44</TD>
+    <TD>9.96</TD>
+    <TD>8.38</TD>
+    <TD>0.03</TD>
+    <TD>7.75</TD>
+    <TD>0.04</TD>
+    <TD>7.56</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>4.67</TD>
+    <TD>4100</TD>
+    <TD>0.55</TD>
+    <TD>4.0</TD>
+    <TD>0.34</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.31</TD>
+    <TD>0.1</TD>
+    <TD>1</TD>
+    <TD>1.3</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>37</TD>
+    <TD>ChaI-PM-40</TD>
+    <TD>SED</TD>
+    <TD>073-015796</TD>
+    <TD>11 30 01.54</TD>
+    <TD>-75 29 14.6</TD>
+    <TD>-15.8</TD>
+    <TD>1.5</TD>
+    <TD>2.9</TD>
+    <TD>1.5</TD>
+    <TD>13.93</TD>
+    <TD>12.35</TD>
+    <TD>13.13</TD>
+    <TD>11.75</TD>
+    <TD>11.09</TD>
+    <TD>9.29</TD>
+    <TD>0.02</TD>
+    <TD>8.6</TD>
+    <TD>0.04</TD>
+    <TD>8.32</TD>
+    <TD>0.04</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>19.13</TD>
+    <TD>3700</TD>
+    <TD>0.97</TD>
+    <TD>4.5</TD>
+    <TD>0.41</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.11</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>38</TD>
+    <TD>ChaI-PM-41</TD>
+    <TD>SED</TD>
+    <TD>073-015916</TD>
+    <TD>11 32 33.52</TD>
+    <TD>-75 35 01.1</TD>
+    <TD>-18.8</TD>
+    <TD>1.0</TD>
+    <TD>2.4</TD>
+    <TD>1.0</TD>
+    <TD>12.15</TD>
+    <TD>10.58</TD>
+    <TD>11.32</TD>
+    <TD>9.98</TD>
+    <TD>9.33</TD>
+    <TD>7.59</TD>
+    <TD>0.02</TD>
+    <TD>6.83</TD>
+    <TD>0.02</TD>
+    <TD>6.59</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>17.99</TD>
+    <TD>3800</TD>
+    <TD>1.0</TD>
+    <TD>3.5</TD>
+    <TD>0.5</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.59</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>39</TD>
+    <TD>ChaI-PM-42</TD>
+    <TD>SED</TD>
+    <TD>073-015951</TD>
+    <TD>11 33 24.12</TD>
+    <TD>-75 32 02.2</TD>
+    <TD>-16.2</TD>
+    <TD>1.9</TD>
+    <TD>-0.7</TD>
+    <TD>2.0</TD>
+    <TD>15.33</TD>
+    <TD>13.73</TD>
+    <TD>14.5</TD>
+    <TD>13.07</TD>
+    <TD>12.44</TD>
+    <TD>10.67</TD>
+    <TD>0.02</TD>
+    <TD>9.94</TD>
+    <TD>0.03</TD>
+    <TD>9.73</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>13.23</TD>
+    <TD>3600</TD>
+    <TD>0.64</TD>
+    <TD>4.0</TD>
+    <TD>0.87</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.65</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>40</TD>
+    <TD>ChaI-PM-43</TD>
+    <TD>SED</TD>
+    <TD>073-016070</TD>
+    <TD>11 36 26.68</TD>
+    <TD>-75 31 42.5</TD>
+    <TD>-17.3</TD>
+    <TD>1.7</TD>
+    <TD>5.4</TD>
+    <TD>1.7</TD>
+    <TD>15.09</TD>
+    <TD>13.56</TD>
+    <TD>14.3</TD>
+    <TD>12.98</TD>
+    <TD>12.3</TD>
+    <TD>10.47</TD>
+    <TD>0.02</TD>
+    <TD>9.69</TD>
+    <TD>0.02</TD>
+    <TD>9.5</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>18.82</TD>
+    <TD>3800</TD>
+    <TD>1.0</TD>
+    <TD>3.5</TD>
+    <TD>0.97</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.58</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>41</TD>
+    <TD>ChaI-PM-45</TD>
+    <TD>SED</TD>
+    <TD>074-015749</TD>
+    <TD>11 30 52.27</TD>
+    <TD>-75 22 44.6</TD>
+    <TD>-17.9</TD>
+    <TD>1.3</TD>
+    <TD>1.1</TD>
+    <TD>1.3</TD>
+    <TD>13.61</TD>
+    <TD>12.37</TD>
+    <TD>12.96</TD>
+    <TD>11.9</TD>
+    <TD>11.45</TD>
+    <TD>9.97</TD>
+    <TD>0.02</TD>
+    <TD>9.3</TD>
+    <TD>0.02</TD>
+    <TD>9.18</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>5.15</TD>
+    <TD>4200</TD>
+    <TD>0.71</TD>
+    <TD>4.0</TD>
+    <TD>0.51</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.32</TD>
+    <TD>0.1</TD>
+    <TD>12</TD>
+    <TD>1.1</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>42</TD>
+    <TD>ChaI-PM-46</TD>
+    <TD>SED</TD>
+    <TD>076-014623</TD>
+    <TD>10 47 36.41</TD>
+    <TD>-74 54 33.3</TD>
+    <TD>-14.8</TD>
+    <TD>1.6</TD>
+    <TD>-0.5</TD>
+    <TD>1.6</TD>
+    <TD>14.77</TD>
+    <TD>13.25</TD>
+    <TD>13.97</TD>
+    <TD>12.7</TD>
+    <TD>12.18</TD>
+    <TD>10.53</TD>
+    <TD>0.02</TD>
+    <TD>9.92</TD>
+    <TD>0.02</TD>
+    <TD>9.72</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>12.44</TD>
+    <TD>4000</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>0.71</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.58</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>43</TD>
+    <TD>ChaI-PM-47</TD>
+    <TD>SED</TD>
+    <TD>076-015051</TD>
+    <TD>10 56 14.89</TD>
+    <TD>-74 50 45.5</TD>
+    <TD>-14.8</TD>
+    <TD>1.4</TD>
+    <TD>-0.8</TD>
+    <TD>1.4</TD>
+    <TD>13.37</TD>
+    <TD>11.64</TD>
+    <TD>12.49</TD>
+    <TD>11.01</TD>
+    <TD>10.19</TD>
+    <TD>8.32</TD>
+    <TD>0.02</TD>
+    <TD>7.52</TD>
+    <TD>0.04</TD>
+    <TD>7.22</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>44.63</TD>
+    <TD>3500</TD>
+    <TD>0.86</TD>
+    <TD>5.0</TD>
+    <TD>0.86</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.28</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>44</TD>
+    <TD>ChaI-PM-48</TD>
+    <TD>SED</TD>
+    <TD>076-015563</TD>
+    <TD>11 05 51.66</TD>
+    <TD>-74 58 39.6</TD>
+    <TD>-20.9</TD>
+    <TD>2.6</TD>
+    <TD>1.9</TD>
+    <TD>2.6</TD>
+    <TD>16.52</TD>
+    <TD>15.03</TD>
+    <TD>15.88</TD>
+    <TD>14.27</TD>
+    <TD>13.28</TD>
+    <TD>11.1</TD>
+    <TD>0.02</TD>
+    <TD>10.37</TD>
+    <TD>0.02</TD>
+    <TD>10.14</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>3.13</TD>
+    <TD>3400</TD>
+    <TD>0.85</TD>
+    <TD>3.5</TD>
+    <TD>0.57</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.87</TD>
+    <TD>0.13</TD>
+    <TD>4</TD>
+    <TD>0.3</TD>
+    <TD>m</TD>
+    <TD>2</TD>
+  </TR>
+  <TR>
+    <TD>45</TD>
+    <TD>ChaI-PM-50</TD>
+    <TD>SED</TD>
+    <TD>076-016843</TD>
+    <TD>11 28 14.58</TD>
+    <TD>-74 53 08.5</TD>
+    <TD>-21.7</TD>
+    <TD>1.6</TD>
+    <TD>-0.4</TD>
+    <TD>1.1</TD>
+    <TD>12.27</TD>
+    <TD>10.6</TD>
+    <TD>11.43</TD>
+    <TD>10.01</TD>
+    <TD>9.36</TD>
+    <TD>7.68</TD>
+    <TD>0.04</TD>
+    <TD>6.85</TD>
+    <TD>0.04</TD>
+    <TD>6.58</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>59.24</TD>
+    <TD>3700</TD>
+    <TD>0.52</TD>
+    <TD>4.0</TD>
+    <TD>0.48</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.58</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>46</TD>
+    <TD>ChaI-PM-51</TD>
+    <TD>SED</TD>
+    <TD>077-015492</TD>
+    <TD>11 03 49.69</TD>
+    <TD>-74 39 48.7</TD>
+    <TD>-18.3</TD>
+    <TD>1.8</TD>
+    <TD>4.9</TD>
+    <TD>1.4</TD>
+    <TD>12.66</TD>
+    <TD>11.17</TD>
+    <TD>11.9</TD>
+    <TD>10.65</TD>
+    <TD>10.12</TD>
+    <TD>8.46</TD>
+    <TD>0.02</TD>
+    <TD>7.8</TD>
+    <TD>0.05</TD>
+    <TD>7.57</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>12.53</TD>
+    <TD>3900</TD>
+    <TD>0.68</TD>
+    <TD>3.5</TD>
+    <TD>0.35</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.26</TD>
+    <TD>0.14</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>47</TD>
+    <TD>ChaI-PM-52</TD>
+    <TD>SED</TD>
+    <TD>077-016041</TD>
+    <TD>11 12 31.20</TD>
+    <TD>-74 45 26.7</TD>
+    <TD>-17.8</TD>
+    <TD>2.9</TD>
+    <TD>0.7</TD>
+    <TD>2.9</TD>
+    <TD>16.78</TD>
+    <TD>15.04</TD>
+    <TD>15.86</TD>
+    <TD>14.35</TD>
+    <TD>13.07</TD>
+    <TD>10.85</TD>
+    <TD>0.03</TD>
+    <TD>10.05</TD>
+    <TD>0.03</TD>
+    <TD>9.84</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>16.16</TD>
+    <TD>3200</TD>
+    <TD>0.82</TD>
+    <TD>4.0</TD>
+    <TD>0.61</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.77</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>48</TD>
+    <TD>ChaI-PM-53</TD>
+    <TD>SED</TD>
+    <TD>078-018302</TD>
+    <TD>11 21 10.28</TD>
+    <TD>-74 28 56.6</TD>
+    <TD>-15.2</TD>
+    <TD>1.4</TD>
+    <TD>-0.4</TD>
+    <TD>2.6</TD>
+    <TD>13.95</TD>
+    <TD>12.56</TD>
+    <TD>13.23</TD>
+    <TD>12.08</TD>
+    <TD>11.6</TD>
+    <TD>10.11</TD>
+    <TD>0.03</TD>
+    <TD>9.44</TD>
+    <TD>0.02</TD>
+    <TD>9.29</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>10.83</TD>
+    <TD>4200</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>0.56</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.38</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>49</TD>
+    <TD>ChaI-PM-55</TD>
+    <TD>SED</TD>
+    <TD>078-018479</TD>
+    <TD>11 24 47.80</TD>
+    <TD>-74 35 00.8</TD>
+    <TD>-15.2</TD>
+    <TD>1.2</TD>
+    <TD>3.1</TD>
+    <TD>1.2</TD>
+    <TD>13.19</TD>
+    <TD>11.65</TD>
+    <TD>12.4</TD>
+    <TD>11.12</TD>
+    <TD>10.63</TD>
+    <TD>9.03</TD>
+    <TD>0.02</TD>
+    <TD>8.41</TD>
+    <TD>0.05</TD>
+    <TD>8.21</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>21.71</TD>
+    <TD>4000</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>0.91</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.02</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>50</TD>
+    <TD>ChaI-PM-56</TD>
+    <TD>SED</TD>
+    <TD>079-016934</TD>
+    <TD>10 57 31.50</TD>
+    <TD>-74 23 06.8</TD>
+    <TD>-16.1</TD>
+    <TD>1.5</TD>
+    <TD>-1.2</TD>
+    <TD>1.5</TD>
+    <TD>13.57</TD>
+    <TD>12.16</TD>
+    <TD>12.84</TD>
+    <TD>11.69</TD>
+    <TD>11.2</TD>
+    <TD>9.64</TD>
+    <TD>0.03</TD>
+    <TD>8.99</TD>
+    <TD>0.02</TD>
+    <TD>8.78</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>9.97</TD>
+    <TD>4100</TD>
+    <TD>0.99</TD>
+    <TD>4.5</TD>
+    <TD>0.73</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.2</TD>
+    <TD>0.1</TD>
+    <TD>7</TD>
+    <TD>1.1</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>51</TD>
+    <TD>ChaI-PM-57</TD>
+    <TD>SED</TD>
+    <TD>079-017285</TD>
+    <TD>11 03 53.92</TD>
+    <TD>-74 19 25.4</TD>
+    <TD>-19.7</TD>
+    <TD>1.5</TD>
+    <TD>1.7</TD>
+    <TD>1.5</TD>
+    <TD>13.87</TD>
+    <TD>12.59</TD>
+    <TD>13.19</TD>
+    <TD>12.19</TD>
+    <TD>11.76</TD>
+    <TD>10.23</TD>
+    <TD>0.03</TD>
+    <TD>9.56</TD>
+    <TD>0.02</TD>
+    <TD>9.41</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>10.03</TD>
+    <TD>4200</TD>
+    <TD>0.79</TD>
+    <TD>3.5</TD>
+    <TD>0.42</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.42</TD>
+    <TD>0.14</TD>
+    <TD>20</TD>
+    <TD>1.0</TD>
+    <TD>m</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>52</TD>
+    <TD>ChaII-PM-1</TD>
+    <TD>SED</TD>
+    <TD>050-011288</TD>
+    <TD>12 47 25.39</TD>
+    <TD>-80 08 01.5</TD>
+    <TD>-19.0</TD>
+    <TD>2.1</TD>
+    <TD>-10.7</TD>
+    <TD>4.6</TD>
+    <TD>17.67</TD>
+    <TD>15.8</TD>
+    <TD>16.74</TD>
+    <TD>14.89</TD>
+    <TD>13.75</TD>
+    <TD>11.21</TD>
+    <TD>0.02</TD>
+    <TD>10.47</TD>
+    <TD>0.02</TD>
+    <TD>10.14</TD>
+    <TD>0.02</TD>
+    <TD>2.81</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>14.34</TD>
+    <TD>3600</TD>
+    <TD>0.31</TD>
+    <TD>5.0</TD>
+    <TD>0.84</TD>
+    <TD>1.69</TD>
+    <TD>0.2</TD>
+    <TD>-0.61</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>53</TD>
+    <TD>ChaII-PM-2</TD>
+    <TD>SED</TD>
+    <TD>054-012268</TD>
+    <TD>12 54 34.93</TD>
+    <TD>-79 23 11.0</TD>
+    <TD>-17.6</TD>
+    <TD>1.1</TD>
+    <TD>-2.2</TD>
+    <TD>1.1</TD>
+    <TD>13.83</TD>
+    <TD>12.04</TD>
+    <TD>12.95</TD>
+    <TD>11.31</TD>
+    <TD>10.4</TD>
+    <TD>8.3</TD>
+    <TD>0.03</TD>
+    <TD>7.5</TD>
+    <TD>0.03</TD>
+    <TD>7.22</TD>
+    <TD>0.02</TD>
+    <TD>0.92</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>22.74</TD>
+    <TD>3800</TD>
+    <TD>0.87</TD>
+    <TD>4.0</TD>
+    <TD>0.88</TD>
+    <TD>0.92</TD>
+    <TD>0.82</TD>
+    <TD>0.48</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>54</TD>
+    <TD>ChaII-PM-3</TD>
+    <TD>SED</TD>
+    <TD>055-012803</TD>
+    <TD>12 54 27.89</TD>
+    <TD>-79 07 12.6</TD>
+    <TD>-16.5</TD>
+    <TD>1.5</TD>
+    <TD>-3.0</TD>
+    <TD>1.5</TD>
+    <TD>16.11</TD>
+    <TD>13.66</TD>
+    <TD>14.89</TD>
+    <TD>12.62</TD>
+    <TD>11.13</TD>
+    <TD>8.27</TD>
+    <TD>0.03</TD>
+    <TD>7.11</TD>
+    <TD>0.04</TD>
+    <TD>6.65</TD>
+    <TD>0.02</TD>
+    <TD>2.8</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>85.64</TD>
+    <TD>3600</TD>
+    <TD>0.93</TD>
+    <TD>4.0</TD>
+    <TD>0.78</TD>
+    <TD>2.8</TD>
+    <TD>0.85</TD>
+    <TD>0.73</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>55</TD>
+    <TD>ChaII-PM-6</TD>
+    <TD>SED</TD>
+    <TD>060-014727</TD>
+    <TD>13 04 33.12</TD>
+    <TD>-78 06 07.9</TD>
+    <TD>-16.0</TD>
+    <TD>2.2</TD>
+    <TD>-2.8</TD>
+    <TD>2.0</TD>
+    <TD>15.56</TD>
+    <TD>13.74</TD>
+    <TD>14.68</TD>
+    <TD>12.97</TD>
+    <TD>12.08</TD>
+    <TD>9.86</TD>
+    <TD>0.02</TD>
+    <TD>8.98</TD>
+    <TD>0.03</TD>
+    <TD>8.65</TD>
+    <TD>0.02</TD>
+    <TD>1.18</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>13.93</TD>
+    <TD>3800</TD>
+    <TD>0.39</TD>
+    <TD>4.0</TD>
+    <TD>0.48</TD>
+    <TD>1.18</TD>
+    <TD>0.33</TD>
+    <TD>-0.08</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>56</TD>
+    <TD>ChaII-PM-7</TD>
+    <TD>SED</TD>
+    <TD>061-014507</TD>
+    <TD>13 09 04.31</TD>
+    <TD>-77 54 39.0</TD>
+    <TD>-17.2</TD>
+    <TD>1.5</TD>
+    <TD>-5.7</TD>
+    <TD>1.5</TD>
+    <TD>15.02</TD>
+    <TD>13.37</TD>
+    <TD>14.22</TD>
+    <TD>12.66</TD>
+    <TD>11.87</TD>
+    <TD>9.87</TD>
+    <TD>0.03</TD>
+    <TD>9.06</TD>
+    <TD>0.03</TD>
+    <TD>8.82</TD>
+    <TD>0.02</TD>
+    <TD>0.25</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>37.13</TD>
+    <TD>3400</TD>
+    <TD>0.9</TD>
+    <TD>4.0</TD>
+    <TD>0.9</TD>
+    <TD>0.24</TD>
+    <TD>0.2</TD>
+    <TD>-0.22</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>57</TD>
+    <TD>ChaII-PM-8</TD>
+    <TD>SED</TD>
+    <TD>063-014624</TD>
+    <TD>13 07 19.79</TD>
+    <TD>-77 25 41.1</TD>
+    <TD>-19.7</TD>
+    <TD>1.8</TD>
+    <TD>-2.3</TD>
+    <TD>1.8</TD>
+    <TD>15.77</TD>
+    <TD>13.83</TD>
+    <TD>14.81</TD>
+    <TD>12.98</TD>
+    <TD>12.07</TD>
+    <TD>9.75</TD>
+    <TD>0.02</TD>
+    <TD>8.86</TD>
+    <TD>0.03</TD>
+    <TD>8.51</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>100.79</TD>
+    <TD>3200</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.23</TD>
+    <TD>0.11</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>58</TD>
+    <TD>ChaII-PM-9</TD>
+    <TD>SED</TD>
+    <TD>066-014936</TD>
+    <TD>12 38 09.43</TD>
+    <TD>-76 51 13.7</TD>
+    <TD>-24.9</TD>
+    <TD>2.3</TD>
+    <TD>-5.8</TD>
+    <TD>2.3</TD>
+    <TD>15.42</TD>
+    <TD>13.56</TD>
+    <TD>14.51</TD>
+    <TD>12.48</TD>
+    <TD>9.82</TD>
+    <TD>6.13</TD>
+    <TD>0.02</TD>
+    <TD>5.12</TD>
+    <TD>0.06</TD>
+    <TD>4.67</TD>
+    <TD>0.04</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>270.4</TD>
+    <TD>2800</TD>
+    <TD>1.0</TD>
+    <TD>5.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>1.1</TD>
+    <TD>0.11</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>59</TD>
+    <TD>ChaII-PM-10</TD>
+    <TD>SED</TD>
+    <TD>067-015388</TD>
+    <TD>12 52 51.72</TD>
+    <TD>-76 45 34.4</TD>
+    <TD>-22.0</TD>
+    <TD>1.9</TD>
+    <TD>-5.9</TD>
+    <TD>1.9</TD>
+    <TD>14.5</TD>
+    <TD>12.76</TD>
+    <TD>13.59</TD>
+    <TD>12.04</TD>
+    <TD>11.27</TD>
+    <TD>9.24</TD>
+    <TD>0.02</TD>
+    <TD>8.46</TD>
+    <TD>0.04</TD>
+    <TD>8.18</TD>
+    <TD>0.03</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>61.97</TD>
+    <TD>3400</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.01</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>60</TD>
+    <TD>ChaII-PM-11</TD>
+    <TD>SED</TD>
+    <TD>067-015927</TD>
+    <TD>13 09 26.15</TD>
+    <TD>-76 40 13.8</TD>
+    <TD>-23.0</TD>
+    <TD>4.6</TD>
+    <TD>-8.2</TD>
+    <TD>4.5</TD>
+    <TD>16.75</TD>
+    <TD>15.1</TD>
+    <TD>15.87</TD>
+    <TD>14.45</TD>
+    <TD>13.16</TD>
+    <TD>11.03</TD>
+    <TD>0.02</TD>
+    <TD>10.26</TD>
+    <TD>0.02</TD>
+    <TD>10.05</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>6.34</TD>
+    <TD>3300</TD>
+    <TD>0.64</TD>
+    <TD>3.5</TD>
+    <TD>0.55</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>-0.74</TD>
+    <TD>0.1</TD>
+    <TD>2</TD>
+    <TD>0.3</TD>
+    <TD>m</TD>
+    <TD>1</TD>
+  </TR>
+  <TR>
+    <TD>61</TD>
+    <TD>ChaII-PM-12</TD>
+    <TD>SED</TD>
+    <TD>067-016250</TD>
+    <TD>13 15 34.41</TD>
+    <TD>-76 47 13.5</TD>
+    <TD>-20.2</TD>
+    <TD>2.0</TD>
+    <TD>-4.9</TD>
+    <TD>1.3</TD>
+    <TD>12.85</TD>
+    <TD>11.12</TD>
+    <TD>11.99</TD>
+    <TD>10.48</TD>
+    <TD>9.76</TD>
+    <TD>8.01</TD>
+    <TD>0.02</TD>
+    <TD>7.15</TD>
+    <TD>0.03</TD>
+    <TD>6.94</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>52.85</TD>
+    <TD>3600</TD>
+    <TD>1.0</TD>
+    <TD>4.0</TD>
+    <TD>1.0</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.52</TD>
+    <TD>0.11</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>62</TD>
+    <TD>ChaII-PM-13</TD>
+    <TD>SED</TD>
+    <TD>072-019687</TD>
+    <TD>13 10 16.01</TD>
+    <TD>-75 42 18.7</TD>
+    <TD>-25.5</TD>
+    <TD>3.3</TD>
+    <TD>-2.1</TD>
+    <TD>3.3</TD>
+    <TD>15.55</TD>
+    <TD>13.81</TD>
+    <TD>14.63</TD>
+    <TD>13.01</TD>
+    <TD>10.76</TD>
+    <TD>8.09</TD>
+    <TD>0.03</TD>
+    <TD>7.12</TD>
+    <TD>0.03</TD>
+    <TD>6.75</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>35.37</TD>
+    <TD>2800</TD>
+    <TD>1.0</TD>
+    <TD>5.0</TD>
+    <TD>0.8</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.41</TD>
+    <TD>0.11</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>63</TD>
+    <TD>ChaII-PM-14</TD>
+    <TD>SED</TD>
+    <TD>073-021942</TD>
+    <TD>13 23 10.45</TD>
+    <TD>-75 30 40.1</TD>
+    <TD>-18.0</TD>
+    <TD>1.9</TD>
+    <TD>-9.0</TD>
+    <TD>1.0</TD>
+    <TD>12.57</TD>
+    <TD>10.91</TD>
+    <TD>11.72</TD>
+    <TD>10.16</TD>
+    <TD>8.04</TD>
+    <TD>5.06</TD>
+    <TD>0.03</TD>
+    <TD>4.04</TD>
+    <TD>0.23</TD>
+    <TD>3.73</TD>
+    <TD>0.28</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>4.49</TD>
+    <TD>2800</TD>
+    <TD>1.0</TD>
+    <TD>5.0</TD>
+    <TD>0.86</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>1.6</TD>
+    <TD>0.13</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nm</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>64</TD>
+    <TD>ChaII-PM-17</TD>
+    <TD>SED</TD>
+    <TD>078-025497</TD>
+    <TD>13 07 45.15</TD>
+    <TD>-74 27 25.9</TD>
+    <TD>-20.0</TD>
+    <TD>2.4</TD>
+    <TD>-4.8</TD>
+    <TD>2.4</TD>
+    <TD>13.66</TD>
+    <TD>11.96</TD>
+    <TD>12.78</TD>
+    <TD>11.33</TD>
+    <TD>10.18</TD>
+    <TD>8.32</TD>
+    <TD>0.02</TD>
+    <TD>7.45</TD>
+    <TD>0.04</TD>
+    <TD>7.15</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>55.21</TD>
+    <TD>3400</TD>
+    <TD>0.98</TD>
+    <TD>4.5</TD>
+    <TD>0.38</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>0.37</TD>
+    <TD>0.11</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nc</TD>
+    <TD>255</TD>
+  </TR>
+  <TR>
+    <TD>65</TD>
+    <TD>ChaII-PM-18</TD>
+    <TD>SED</TD>
+    <TD>079-024691</TD>
+    <TD>12 58 38.11</TD>
+    <TD>-74 17 11.2</TD>
+    <TD>-25.6</TD>
+    <TD>8.3</TD>
+    <TD>-8.0</TD>
+    <TD>8.5</TD>
+    <TD>12.46</TD>
+    <TD>10.76</TD>
+    <TD>11.81</TD>
+    <TD>10.18</TD>
+    <TD>8.07</TD>
+    <TD>5.76</TD>
+    <TD>0.03</TD>
+    <TD>4.91</TD>
+    <TD>0.02</TD>
+    <TD>4.48</TD>
+    <TD>0.02</TD>
+    <TD>0.0</TD>
+    <TD>2M</TD>
+    <TD>BT-Settl</TD>
+    <TD>48.59</TD>
+    <TD>2900</TD>
+    <TD>1.0</TD>
+    <TD>4.5</TD>
+    <TD>0.56</TD>
+    <TD>0.0</TD>
+    <TD>1.0</TD>
+    <TD>1.39</TD>
+    <TD>0.1</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>nm</TD>
+    <TD>255</TD>
+  </TR>
+</TABLEDATA>
+</DATA>
+</TABLE>
+</RESOURCE>
+</VOTABLE>

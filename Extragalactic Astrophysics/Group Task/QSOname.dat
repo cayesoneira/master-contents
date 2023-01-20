@@ -1,0 +1,9 @@
+1 # Ngal
+xG yG errxy # G: position and error (in ′′)
+0.0 1000
+0.0 1000
+0.0 1000
+1 # Nsrc
+2 # Nimg
+xA yA FA errxy errF delayA errdelay # image A
+xB yB FB errxy errF delayB errdelay # image B

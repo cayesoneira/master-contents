@@ -1,0 +1,137 @@
+# Make the NOAO optical astronomy packages.
+
+$ifeq (hostid, unix)  !(clear;date)  $endif
+$call update
+$ifeq (hostid, unix)  !(date)  $endif
+$exit
+
+update:
+	$call noaolib
+	$call artdata
+	$call astutil
+	$call astcat
+	$call digiphot
+	$call mtlocal
+	$call nobsolete
+	$call nproto
+	$call obsutil
+	$call onedspec
+	$call rv
+	$call twodspec
+	$call imred
+
+	$ifeq (HOSTID, vms) $purge [...] $endif
+	$purge noaobin$
+	;
+
+noaolib:
+	$echo "--------------------- NOAOLIB ---------------------"
+	$call asttools@astutil
+	$call smw@onedspec
+	;
+artdata:
+	$echo "--------------------- ARTDATA ---------------------"
+	$call update@artdata
+	;
+astcat:
+	$echo "--------------------- ASTCAT ----------------------"
+	$call update@astcat
+	;
+astutil:
+	$echo "--------------------- ASTUTIL ---------------------"
+	$call update@astutil
+	;
+mtlocal:
+	$echo "--------------------- MTLOCAL ---------------------"
+	$call update@mtlocal
+	;
+digiphot:
+	$echo "--------------------- DIGIPHOT --------------------"
+	$call update@digiphot
+	;
+nobsolete:
+	$echo "------------------- NOBSOLETE ---------------------"
+	$call update@nobsolete
+	;
+nproto:
+	$echo "--------------------- NPROTO ----------------------"
+	$call update@nproto
+	;
+obsutil:
+	$echo "--------------------- OBSUTIL ---------------------"
+	$call update@obsutil
+	;
+onedspec:
+	$echo "--------------------- ONEDSPEC --------------------"
+	$call update@onedspec
+	;
+twodspec:
+	$echo "--------------------- TWODSPEC --------------------"
+	$call update@twodspec
+	;
+rv:
+	$echo "--------------------- RV --------------------------"
+	$call update@rv
+	;
+imred:
+	$echo "--------------------- IMRED -----------------------"
+	$call update@imred
+	;
+
+# STRIP -- Strip the NOAO directories of all sources and other files not
+# required to run the system, or for user programming.
+
+strip:
+	!rmfiles -f lib/strip.noao
+	;
+
+# SUN/IRAF multiple architecture support.
+# ----------------------------------------
+
+arch:
+showfloat:				# show current float option
+	$verbose off
+	!$(hlib)/mkfloat
+	;
+generic:				# make architecture indep. (no bins)
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat generic -d $(DIRS)
+	;
+freebsd:				# install FREEBSD binaries
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat freebsd -d $(DIRS)
+	;
+macosx:					# install MACOSX (PPC) binaries
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat macosx -d $(DIRS)
+	;
+macintel:				# install MACOSX (x86) binaries
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat macintel -d $(DIRS)
+	;
+macos64:				# install MACOSX (arm64) binaries
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat macos64 -d $(DIRS)
+	;
+linux:					# install Linux binaries
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat linux -d $(DIRS)
+	;
+linux64:				# install Linux x86_64 binaries
+	$verbose off
+	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
+	             nproto nobsolete rv surfphot twodspec obsutil"
+	!$(hlib)/mkfloat linux64 -d $(DIRS)
+	;

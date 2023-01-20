@@ -1,0 +1,9 @@
+1 # 1 lens galaxy
+0.981 0.485 0.010 # Galaxy: position and error (in ′′)
+0.0 1000 # 0.96 0.07 R_eff observed
+0.0 1000 # 32 10  PA unconstrained in observations
+0.0 1000 # 0.18 0.05 observed ellipticity
+1 # Number of sources
+2 # Number of images
+0.0 0.0 1.000 0.0001 0.001 0.0 0.1 # image A
+1.419 0.939 0.175 0.001 0.015 48.0 2.0 # image B

@@ -1,0 +1,80 @@
+# common definitions for all routines comprising the ratfor preprocessor
+#---------------------------------------------------------------
+# The definition STDEFNS defines the file which contains the
+# standard definitions to be used when preprocessing a file.
+# It is opened and read automatically by the ratfor preprocessor.
+# Set STDEFNS to the name of the file in which the standard
+# definitions reside.  If you don't want the preprocessor to
+# automatically open this file, set STDENFS to "".
+#
+#---------------------------------------------------------------
+#  Some of the buffer sizes and other symbols might have to be
+#  changed.  Especially check the following:
+#
+#	 MAXDEF 	(number of characters in a definition)
+#	 SBUFSIZE	(nbr string declarations allowed per module)
+#	 MAXSTRTBL	(size of table to buffer string declarations)
+#	 MAXSWITCH	(max stack for switch statement)
+#
+#-----------------------------------------------------------------
+
+include dsdefs
+include asciidefs
+include rdefs
+define (ARB,100)
+define (STDEFNS, string defns "")  # standard defns file
+define (NULL,0)
+define (EOF,-1)
+define (EOS,-2)
+define (ERR,-3)
+define (NO,0)
+define (YES,1)
+define (NOERR,0)
+define (OK,-2)
+define (MAXLINE,128)
+define (MAXNAME,30)
+define (FILENAMESIZE,40)   # max num chars per filename
+
+define (READ,1)            # modes for file open
+define (WRITE,2)
+define (READWRITE,3)
+define (APPEND,4)
+
+define (STDIN,0)
+define (STDOUT,1)
+define (STDERR,2)
+define (ERROUT,STDERR)
+
+define (pointer,integer)
+define (character,integer)
+define (filedes,integer)
+
+define (INDENT,3)	   # number of spaces of indentation
+define (MAX_INDENT,30)	   # maximum column for indentation
+define (FIRST_LABEL,100)   # first statement label
+define (SZ_SPOOLBUF,8)	   # for breaking continuation cards
+
+define (RADIX,PERCENT)	   # % indicates alternate radix
+define (TOGGLE,PERCENT)    # toggle for literal lines
+define (ARGFLAG,DOLLAR)
+define (CUTOFF,3)	   # min nbr of cases to generate branch table
+			   # (for switch statement)
+define (DENSITY,2)	   # reciprocal of density necessary for
+			   # branch table
+define (FILLCHAR,DIG0)	   # used in long-name uniquing
+define (MAXIDLENGTH,6)	   # for Fortran 66 and 77
+define (SZ_SMEM,240)	   # memory common declarations string
+
+define (MAXCHARS,20)
+define (MAXARG,128)
+
+# The following external names are redefined to avoid name collisions with
+# standard library procedures on some systems.
+
+define (open,rfopen)
+define (close,rfclos)
+define (flush,rfflus)
+define (note,rfnote)
+define (seek,rfseek)
+define (remove,rfrmov)
+define (exit,rexit)

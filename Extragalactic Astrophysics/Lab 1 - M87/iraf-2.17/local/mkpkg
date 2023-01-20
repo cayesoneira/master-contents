@@ -1,0 +1,15 @@
+# Make the LOCAL package.
+
+$call	update@src
+$exit
+
+update:
+	$call update@src
+	;
+
+# STRIP -- Strip the LOCAL package directories of all sources and other files
+# not required to run the system, or for user programming.
+
+strip:
+	!rmfiles -f lib/strip.local
+	;

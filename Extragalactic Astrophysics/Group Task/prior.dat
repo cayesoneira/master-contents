@@ -1,0 +1,4 @@
+2                 # Number of priors
+1 4 0.18 0.05     # Galaxy ellip and its error
+1 5 32 10         # Galaxy PA and its error
+

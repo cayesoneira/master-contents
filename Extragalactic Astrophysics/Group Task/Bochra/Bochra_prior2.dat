@@ -1,0 +1,4 @@
+3 # Npri
+1 4 0.18 0.05 # G: ellip and its error
+1 5 32 10 # G: PA and its error
+1 8 0.96 0.07 # Reff and its error

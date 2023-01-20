@@ -1,0 +1,10 @@
+1                                        # Number of lens galaxies
+0.981 0.485 0.010                        # Galaxy: position and error (in ′′)
+0.0 1000                                 # R_eff
+0.0 1000                                 # PA
+0.0 1000                                 # Ellipticity
+1                                        # Number of sources
+2                                        # Number of images
+0.0 0.0 1.000 0.0001 0.001 0.0 0.1       # image A; x, y, F, errxy, errF, del, errdel
+1.419 0.939 0.175 0.001 0.015 48.0 2.0   # image B; x, y, F, errxy, errF, del, errdel
+

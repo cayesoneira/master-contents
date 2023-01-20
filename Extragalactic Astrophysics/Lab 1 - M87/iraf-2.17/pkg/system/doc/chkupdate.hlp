@@ -1,0 +1,20 @@
+.help chkupdate Oct21 system
+.ih
+NAME
+chkupdate - Check for an available IRAF update (obsolete)
+.ih
+USAGE
+chkupdate
+.ih
+DESCRIPTION
+This task was designed to compare the currently installed IRAF version
+with what is available from the NOAO servers. Since NOAO is
+transitioning IRAF to an end-of-support state, and has taken NOAO’s
+IRAF distribution offline, this tool is not useful anymore. For the
+Community version of IRAF, please check the web site
+https://iraf-community.github.io for new versions. IRAF packages in
+Linux distributions like Debian or Ubuntu are automatically kept
+up-to-date.
+.ih
+SEE ALSO
+.endhelp
