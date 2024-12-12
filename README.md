@@ -1,4 +1,4 @@
-# Master-iPP&PotC
+# Master-iPPandPotC
 
 ## Master in Particle Physics and the Cosmos: Resources and Exercises
 
